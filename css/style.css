@@ -1,0 +1,135 @@
+p {
+    color: #ffffff;
+}
+h1, h2, h3, h4, h5, h6{
+   
+    color: #ffff;
+    font-weight: 700;
+}
+h3 {
+    font-size: 1.5rem;
+}
+body{
+    --header-height: 50px;
+    background-color: rgb(37, 44, 84);
+    font-family: 'Poppins', sans-serif;
+    margin: var(--header-height) 0 0 0;
+    overflow: auto;
+}
+
+/* NAV BAR STYLING STARTS HERE*/
+.hometitle {
+    text-decoration: none;
+}
+.header { 
+    padding-left: 20px;
+    padding-right: 20px;
+    z-index: 8;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: var(--header-height);
+    background: grey;
+    display: flex;
+}
+.hamburger {
+    cursor: pointer;
+    background: none;
+    outline: none;
+    border: none;
+    color: #ffff;
+    width: var(--header-height);
+    flex-shrink: 0;
+    margin-left: auto;
+}
+.sidebar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 9;
+    height: 100vh;
+    width: 250px;
+    background: gray;
+    transform: translateX(250px);
+    transition: transform 0.5s;
+}
+.overlay {
+    z-index: 1;
+    visibility: hidden;
+    opacity: 0;
+    backdrop-filter: blur(1px);
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100vw;
+    height: 100vh;
+}
+.nav--open .sidebar {
+    transform: translateX(0px);
+    box-shadow:  0 0 15px rgba(0, 0 ,0, 0.2);
+}
+.nav--open .overlay {
+    visibility: visible;
+    opacity: 1;
+}
+.sidebar h2 {
+    text-align: center;
+    line-height: 70px;
+    user-select: none;
+}
+.nav-ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    width: 100%;
+}
+.nav-ul a {
+    display: flex;
+    align-items: center;
+    color: #FFFF;
+    font-weight: bold;
+    font-size: 14px;
+    text-decoration: none;
+    padding: 12px 15px;
+}
+.nav-ul a:hover {
+    background: #000;
+}
+/* NAV BAR STYLING ENDS HERE*/
+
+
+/* HERO STYLING STARTS HERE */
+.hero {
+    background-color: #36454F;
+}
+
+.hero-post {
+    position: relative;
+}
+.hero-post-badges {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: #ffffff;
+    padding: 3px;
+
+}
+.hero-post-content {
+    position: absolute;
+    bottom: 15px;
+    margin-left: 10px;
+    }
+.rounded-circle{
+    filter: none;
+    border: 2px solid #ffffff;
+    border-radius:50%;
+    width:100%;
+    }
+
+.hero-post-content img {
+    max-width: 100%; 
+    height: auto;
+}
+
+/* HERO STYLING ENDS HERE */
