@@ -34,22 +34,42 @@
 
 	<?php include_once("nav.php") ?>	
 
-		<section class="hero-post-section">
-			<div class="hero-container">
-				<div class="hero-post">
-					<img src=img/01.jpg>
-					<h2 class="title">Rabble rabble rabble rabble rabble rabble rabble rabble rabble rabble</h2>
-					<span>1/1/2021</span>
-					<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eligendi, exercitationem! Quae iusto, maiores eum obcaecati labore quos hic corporis adipisci id modi temporibus, saepe dolor minus dolorum dolorem magni officiis!</p>
-				</div>
-				<div class="hero-post">
-					<img src=img/01.jpg>
-					<h2 class="title">Rabble rabble rabble rabble rabble</h2>
-					<span>1/1/2021</span>
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit modi autem similique. Itaque ea perspiciatis voluptatibus dolores a molestiae iure?</p>
-				</div>
+		<div class="hero-section">
+			<img src=img/hero.png>
+			<div class="announcement">
+				<h1>ANNOUNCEMENT: I have covid</h1>
 			</div>
-		</section>
+		</div>
+
+		<div class="container">
+			<div class="bb">
+				<h2>Bulletin Board</h2>
+				<div class="bb-grid">
+					<div class="bb-post">
+						<img src="img/01.jpg">
+						<h1>Lorem ipsum, dolor sit amet consectetur adipisicing.</h1>
+						<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sint tempore ipsam ullam cupiditate, pariatur laudantium suscipit officiis aperiam aliquid veritatis veniam laborum id magni repellat.</p>
+					</div>
+					<div class="bb-post">
+						<img src="img/01.jpg">
+						<h1>Lorem ipsum, dolor sit amet consectetur adipisicing.</h1>
+						<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sint tempore ipsam ullam cupiditate, pariatur laudantium suscipit officiis aperiam aliquid veritatis veniam laborum id magni repellat.</p>
+					</div>
+					<div class="bb-post">
+						<img src="img/01.jpg">
+						<h1>Lorem ipsum, dolor sit amet consectetur adipisicing.</h1>
+						<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sint tempore ipsam ullam cupiditate, pariatur laudantium suscipit officiis aperiam aliquid veritatis veniam laborum id magni repellat.</p>
+					</div>
+					<div class="bb-post">
+						<img src="img/01.jpg">
+						<h1>Lorem ipsum, dolor sit amet consectetur adipisicing.</h1>
+						<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sint tempore ipsam ullam cupiditate, pariatur laudantium suscipit officiis aperiam aliquid veritatis veniam laborum id magni repellat.</p>
+					</div>
+				</div>			
+			<div>
+		</div>
+
+		
 
 
 	<script src="js/nav.js"></script>

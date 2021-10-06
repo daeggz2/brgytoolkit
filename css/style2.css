@@ -116,37 +116,51 @@ body{
 }
 /* NAV BAR STYLING ENDS HERE*/
 
-.hero-post-section img {
-    width: 100%;
-}
-
-.hero-post-section{
-    background-color: #2F4F4F;
-}
-.hero-container {
-    width: 100%;
-    max-width: 800px;
+/* ==================================================HERO START */
+.hero-section {
     margin: 0 auto;
-
-}
-.hero-post{
     text-align: center;
-    background-color: rgb(0, 128, 0);
-    width: 45%;
-    float: left;
-    border: 2px solid;
-    margin: 15px;
+    background-color: #1177C1;
+}
+.hero-section img {
+    width: 75%;
+}
+.announcement {
+    color: white;
+    background-color: black;
+}
+.announcement h1 {
+    font-size: 2rem;
 }
 
-@media only screen and (max-width: 600px) {
-    .hero-post{
-        width: 70%;
-        margin: 15px auto;
-        float: none;
-    }
+.container {   
+    margin: 0 auto;
+    display: flex;
 
-    .hero-container {
-        justify-content: center;
+}
+@media (max-width: 1024px) {
+    .container {   
+        flex-direction: column;
     }
 }
+.container h1 {
+    margin-top: 0.5em;
+}
+/* ==================================================HERO END */
 
+
+
+/* ==================================================BB START */
+
+.container{
+    margin: 0 auto;
+}
+.bb-grid{
+    display: grid;
+    grid-template-columns: auto auto auto;
+}
+
+
+
+
+/* ==================================================BB END */
