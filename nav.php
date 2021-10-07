@@ -10,7 +10,7 @@
 				<h2>Navigation</h2>						
 					<ul class="nav-ul" id="nav-ul">
 						<?php if (isset($_SESSION['currentuser'])) { ?>			
-							<li class="nav-item"><a class="nav-link" href="announcements.php">Announcements</a></li>
+							<li class="nav-item"><a class="nav-link" href="createpost.php">Create Post</a></li>
 							<li class="nav-item"><a class="nav-link" href="residents.php">Residents</a></li>
 							<li class="nav-item"><a class="nav-link" href="people.php">People</a></li>
 							<li class="nav-item"><a class="nav-link" href="households.php">Households</a></li>

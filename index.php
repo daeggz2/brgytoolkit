@@ -36,7 +36,7 @@
 
 		<?php 
 			$query = "SELECT * FROM posts";
-			$result = $conn->prepare($query);
+			$result = $db->prepare($query);
    			$result->execute();
 
 			//$posts = $con->query($sql) or die($con->error);
