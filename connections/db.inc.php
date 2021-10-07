@@ -5,7 +5,7 @@
     $dbname = "sanjose";
 
     try {
-        $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
+        $db = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
     }
     catch (PDOException $e) {
         die('Connection Error: ' . $e->getMessage());

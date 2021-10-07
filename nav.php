@@ -13,6 +13,7 @@
 							<li class="nav-item"><a class="nav-link" href="announcements.php">Announcements</a></li>
 							<li class="nav-item"><a class="nav-link" href="residents.php">Residents</a></li>
 							<li class="nav-item"><a class="nav-link" href="people.php">People</a></li>
+							<li class="nav-item"><a class="nav-link" href="households.php">Households</a></li>
 							<li class="nav-item"><a class="nav-link" href="facilities.php">Facilities</a></li>
 							<li class="nav-item"><a class="nav-link" href="blotters.php">Blotters</a></li>
 							<li class="nav-item"><a class="nav-link" href="reports.php">Information Reports</a></li>

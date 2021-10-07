@@ -10,7 +10,7 @@
 	}
 	include_once("connections/db.inc.php");
 
-	$sql = "SELECT * FROM people ORDER BY addedAt DESC";
+	$sql = "SELECT * FROM households ORDER BY addedAt DESC";
 	$stmt = $db->prepare($sql);
 	$stmt->execute();
 ?>
@@ -54,23 +54,11 @@
 			<tbody>
 			<?php 	while ($row = $stmt->fetch()) {?>
 			<tr>
-				<td> <?php echo $row['lName']; ?> </td>
-				<td> <?php echo $row['fName']; ?> </td>
+				<td> <?php echo $row['householdName']; ?> </td>
+				<td> <?php echo $row['addressId']; ?> </td>
 				<td> <?php echo $row['mName']; ?> </td>
 				<td> <?php echo $row['suffixName']; ?> </td>
 				<td> <?php echo $row['gender']; ?> </td>
-				<td> <?php echo $row['birthday']; ?> </td>
-				<td> <?php echo $row['phoneNumber']; ?> </td>
-				<td> <?php echo $row['addressId']; ?> </td>
-				<td> <?php echo $row['civilStatus']; ?> </td>
-				<td> <?php echo $row['isEmployed']; ?> </td>
-				<td> <?php echo $row['isSelfEmployedInBusiness']; ?> </td>
-				<td> <?php echo $row['isSelfEmployedInInformalSector']; ?> </td>
-				<td> <?php echo $row['isSoloParent']; ?> </td>
-				<td> <?php echo $row['isSeniorCitizen']; ?> </td>
-				<td> <?php echo $row['isPWD']; ?> </td>
-				<td> <?php echo $row['relationToHeadOfFamily']; ?> </td>
-				<td> <?php echo $row['addedAt']; ?> </td>
 				<?php } ?>
 			</tr>	
 			</tbody>

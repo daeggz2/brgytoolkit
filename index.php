@@ -10,7 +10,7 @@
 	// }
 	//include_once("connections/connection.php");
 	//$con = connection();
-	include_once("connections/conn.php");
+	include_once("connections/db.inc.php");
 
 
 ?>
