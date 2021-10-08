@@ -56,19 +56,16 @@ INSERT INTO `addresses` (`addressId`, `roomNumber`, `houseNumber`, `block`, `lot
 --
 
 CREATE TABLE `blotters` (
-  `id` int(11) NOT NULL,
-  `suspect_f_name` varchar(50) NOT NULL,
-  `suspect_m_name` varchar(50) NOT NULL,
-  `suspect_l_name` varchar(50) NOT NULL,
-  `suspect_age` smallint(3) NOT NULL,
-  `suspect_contact` varchar(50) NOT NULL,
-  `incident_date` datetime NOT NULL,
-  `incident_desc` varchar(200) NOT NULL,
-  `incident_loc` varchar(150) NOT NULL,
+  `blotterId` int(11) NOT NULL,
+  `suer` int(20) NOT NULL,
+  `target` varchar(50) NOT NULL,
+  `addressId` int(20) NOT NULL,
+  `blotterType` varchar(50) NOT NULL,
+  `finishDate` datetime NOT NULL,
+  `eventDescription` varchar(300) NOT NULL,
+  `eventLocation` varchar(150) NOT NULL,
+  `judgement` varchar(150) NOT NULL,
   `status` varchar(50) NOT NULL,
-  `action` varchar(50) NOT NULL,
-  `complainant` varchar(150) NOT NULL,
-  `complainant_contact` varchar(50) NOT NULL,
   `added_at` datetime NOT NULL DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 

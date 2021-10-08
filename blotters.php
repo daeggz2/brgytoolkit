@@ -12,7 +12,7 @@ else{
 include_once("connections/connection.php");
 $con = connection();
 
-$sql = "SELECT * FROM blotters ORDER BY id DESC";
+$sql = "SELECT * FROM blotters ORDER BY blotterId DESC";
 $blotters = $con->query($sql) or die ($con->error);
 $row = $blotters->fetch_assoc();
 
@@ -44,19 +44,16 @@ $row = $blotters->fetch_assoc();
     <table class="table table-bordered table-dark">
 			<thead class="table-light">
         <tr>
-            <th>First Name</th>
-            <th>Middle Name</th>
-            <th>Last Name</th>
-            <th>Age</th>
-            <th>Contact</th>
-            <th>Incident Date</th>
-            <th>Description</th>
-            <th>Location</th>
+            <th>Suer</th>
+            <th>Target</th>
+            <th>Address ID</th>
+            <th>Blotter Type</th>
+            <th>Finish Date</th>
+            <th>Event Description</th>
+            <th>Event Location</th>
+            <th>Judgement</th>
             <th>Status</th>
-            <th>Action</th>
-            <th>Complainant</th>
-            <th>Complainant Contact</th>
-            <th>Date Added</th>
+            <th>Date</th>
 
         </tr>
         </thead>
@@ -64,18 +61,15 @@ $row = $blotters->fetch_assoc();
         <tbody>
     <?php do{ ?>   
         <tr>
-            <td><?php echo $row['suspect_f_name'];?></td>
-            <td><?php echo $row['suspect_m_name'];?></td>
-            <td><?php echo $row['suspect_l_name'];?></td>
-            <td><?php echo $row['suspect_age'];?></td>
-            <td><?php echo $row['suspect_contact'];?></td>
-            <td><?php echo $row['incident_date'];?></td>
-            <td><?php echo $row['incident_desc'];?></td>
-            <td><?php echo $row['incident_loc'];?></td>
+            <td><?php echo $row['suer'];?></td>
+            <td><?php echo $row['target'];?></td>
+            <td><?php echo $row['addressId'];?></td>
+            <td><?php echo $row['blotterType'];?></td>
+            <td><?php echo $row['finishDate'];?></td>
+            <td><?php echo $row['eventDescription'];?></td>
+            <td><?php echo $row['eventLocation'];?></td>
+            <td><?php echo $row['judgement'];?></td>
             <td><?php echo $row['status'];?></td>
-            <td><?php echo $row['action'];?></td>
-            <td><?php echo $row['complainant'];?></td>
-            <td><?php echo $row['complainant_contact'];?></td>
             <td><?php echo $row['added_at'];?></td>
         </tr>
     <?php }while($row = $blotters->fetch_assoc()); ?>
