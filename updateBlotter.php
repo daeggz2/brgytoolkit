@@ -1,6 +1,12 @@
 <?php
 	include_once("connections/connection.php");
 	$con = connection();
+    $id = $_GET['bID'];
+
+    $sql = "SELECT * FROM blotters WHERE blotterId = '$id'";
+    $blotters = $con->query($sql) or die ($con->error);
+    $row = $blotters->fetch_assoc();
+    
 	if(isset($_POST['submit'])){
 		$suer = $_POST['suer'];
 		$ttarget = $_POST['ttarget'];
@@ -13,13 +19,17 @@
         $statuss = $_POST['statuss'];
         $added_at = $_POST['added_at'];
 
+
 			foreach ($suer as $key => $value) {
-				$sql = "INSERT INTO `blotters`(`suer`, `ttarget`, `addressId`, `blotterType`, `finishDate`, `eventDescription`, `eventLocation`, `judgement`, 
-                `statuss`, `added_at`) 
+				$sql = "UPDATE blotters SET (`suer`, `ttarget`, `addressId`, `blotterType`, `finishDate`, `eventDescription`, `eventLocation`, `judgement`, 
+                `statuss`, `added_at` WHERE blotterId = '$id')
 				VALUES ('$suer[$key]', '$ttarget[$key]', '$addressId[$key]', '$blotterType[$key]', '$finishDate[$key]', '$eventDescription[$key]', '$eventLocation[$key]', 
                 '$judgement[$key]', '$statuss[$key]', '$added_at[$key]')"; 
 				$con->query($sql) or die ($con->error);
-				header("Location: index.php");  //NEEDS ERROR HANDLING AND GATEKEEPING
+				header("Location: detailsBlotter.php?bID=".$id);  //NEEDS ERROR HANDLING AND GATEKEEPING
+
+//                 UPDATE blotters SET suer = '$suer', ttarget = '$ttarget', addressId = '$addressId', blotterType = '$blotterType', finishDate = '$finishDate', eventDescription = '$eventDescription',
+// eventLocation = '$eventLocation', judgement = '$judgement', statuss = '$statuss', added_at = '$added_at' WHERE blotterId = '$id'
 			}
 	}
 ?> 
@@ -64,16 +74,16 @@
                         <th>Date Added</th>
 					</tr>
 					<tr>
-						<td><input type="text" name="suer[]" id="suer" required></td>
-						<td><input type="text" name="ttarget[]" id="ttarget"></td>
-						<td><input type="text" name="addressId[]" id="addressId" required></td>
-                        <td><input type="text" name="blotterType[]" id="blotterType" required></td>
-                        <td><input type="date" name="finishDate[]" id="finishDate" required></td>
-                        <td><input type="text" name="eventDescription[]" id="eventDescription" required></td>
-                        <td><input type="text" name="eventLocation[]" id="eventLocation" required></td>
-                        <td><input type="text" name="judgement[]" id="judgement" required></td>
-                        <td><input type="text" name="statuss[]" id="statuss" required></td>
-                        <td><input type="date" name="added_at[]" id="added_at" required></td>
+						<td><input type="text" name="suer[]" id="suer" required value="<?php echo $row['suer'];?>"></td>
+						<td><input type="text" name="ttarget[]" id="ttarget" value="<?php echo $row['ttarget'];?>"></td>
+						<td><input type="text" name="addressId[]" id="addressId" required value="<?php echo $row['addressId'];?>"></td>
+                        <td><input type="text" name="blotterType[]" id="blotterType" required value="<?php echo $row['blotterType'];?>"></td>
+                        <td><input type="date" name="finishDate[]" id="finishDate" required value="<?php echo $row['finishDate'];?>"></td>
+                        <td><input type="text" name="eventDescription[]" id="eventDescription" required value="<?php echo $row['eventDescription'];?>"></td>
+                        <td><input type="text" name="eventLocation[]" id="eventLocation" required value="<?php echo $row['eventLocation'];?>"></td>
+                        <td><input type="text" name="judgement[]" id="judgement" required value="<?php echo $row['judgement'];?>"></td>
+                        <td><input type="text" name="statuss[]" id="statuss" required value="<?php echo $row['statuss'];?>"></td>
+                        <td><input type="date" name="added_at[]" id="added_at" required value="<?php echo $row['added_at'];?>"></td>
      
 						<td><button type="button" name="addmore" id="addmore">Add More</button></td>
 					</tr>

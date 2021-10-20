@@ -58,14 +58,14 @@ INSERT INTO `addresses` (`addressId`, `roomNumber`, `houseNumber`, `block`, `lot
 CREATE TABLE `blotters` (
   `blotterId` int(11) NOT NULL,
   `suer` int(20) NOT NULL,
-  `target` varchar(50) NOT NULL,
+  `ttarget` varchar(150) NOT NULL,
   `addressId` int(20) NOT NULL,
   `blotterType` varchar(50) NOT NULL,
   `finishDate` datetime NOT NULL,
   `eventDescription` varchar(300) NOT NULL,
   `eventLocation` varchar(150) NOT NULL,
   `judgement` varchar(150) NOT NULL,
-  `status` varchar(50) NOT NULL,
+  `statuss` varchar(50) NOT NULL,
   `added_at` datetime NOT NULL DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 

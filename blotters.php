@@ -16,9 +16,7 @@ $sql = "SELECT * FROM blotters ORDER BY blotterId DESC";
 $blotters = $con->query($sql) or die ($con->error);
 $row = $blotters->fetch_assoc();
 
-// do{
-//     echo $row['suspect_f_name']." ".$row['suspect_l_name']."<br/>";
-// }while($row = $blotters->fetch_assoc());
+
 ?>
 
 <!DOCTYPE html>
@@ -44,6 +42,7 @@ $row = $blotters->fetch_assoc();
     <table class="table table-bordered table-dark">
 			<thead class="table-light">
         <tr>
+            <th></th>
             <th>Suer</th>
             <th>Target</th>
             <th>Address ID</th>
@@ -61,15 +60,16 @@ $row = $blotters->fetch_assoc();
         <tbody>
     <?php do{ ?>   
         <tr>
+            <td><a href="detailsBlotter.php?bID=<?php echo $row['blotterId'];?>">view</a></td>
             <td><?php echo $row['suer'];?></td>
-            <td><?php echo $row['target'];?></td>
+            <td><?php echo $row['ttarget'];?></td>
             <td><?php echo $row['addressId'];?></td>
             <td><?php echo $row['blotterType'];?></td>
             <td><?php echo $row['finishDate'];?></td>
             <td><?php echo $row['eventDescription'];?></td>
             <td><?php echo $row['eventLocation'];?></td>
             <td><?php echo $row['judgement'];?></td>
-            <td><?php echo $row['status'];?></td>
+            <td><?php echo $row['statuss'];?></td>
             <td><?php echo $row['added_at'];?></td>
         </tr>
     <?php }while($row = $blotters->fetch_assoc()); ?>
