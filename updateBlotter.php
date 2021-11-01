@@ -21,15 +21,14 @@
 
 
 			foreach ($suer as $key => $value) {
-				$sql = "UPDATE blotters SET (`suer`, `ttarget`, `addressId`, `blotterType`, `finishDate`, `eventDescription`, `eventLocation`, `judgement`, 
-                `statuss`, `added_at` WHERE blotterId = '$id')
+				$sql = "UPDATE blotters SET `suer`, `ttarget`, `addressId`, `blotterType`, `finishDate`, `eventDescription`, `eventLocation`, `judgement`, 
+                `statuss`, `added_at` WHERE blotterId = '$id'
 				VALUES ('$suer[$key]', '$ttarget[$key]', '$addressId[$key]', '$blotterType[$key]', '$finishDate[$key]', '$eventDescription[$key]', '$eventLocation[$key]', 
                 '$judgement[$key]', '$statuss[$key]', '$added_at[$key]')"; 
 				$con->query($sql) or die ($con->error);
 				header("Location: detailsBlotter.php?bID=".$id);  //NEEDS ERROR HANDLING AND GATEKEEPING
 
-//                 UPDATE blotters SET suer = '$suer', ttarget = '$ttarget', addressId = '$addressId', blotterType = '$blotterType', finishDate = '$finishDate', eventDescription = '$eventDescription',
-// eventLocation = '$eventLocation', judgement = '$judgement', statuss = '$statuss', added_at = '$added_at' WHERE blotterId = '$id'
+
 			}
 	}
 ?> 
